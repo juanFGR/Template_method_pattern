@@ -9,7 +9,7 @@ public:
 	QuickHullS();
 	virtual ~QuickHullS();
 
-	void resolver();
+	string resolver();
 	void mezcla(pair<Solucion*,Solucion*>);
 	Solucion* getInstance();
 

@@ -8,7 +8,9 @@ FRAMEWORK_SRS=framework/Framework.cpp framework/Problema.cpp framework/Solucion.
 EXAMPLE_SRS=examples/FibonacciP.cpp examples/FibonacciS.cpp
 EXAMPLE_SRS1=mergeSort/MergeSortP.cpp mergeSort/MergeSortS.cpp
 EXAMPLE_SRS2=quickHull/QuickHullP.cpp quickHull/QuickHullS.cpp
-SRCS=main.cpp $(FRAMEWORK_SRS) $(EXAMPLE_SRS) $(EXAMPLE_SRS1) $(EXAMPLE_SRS2)
+EXAMPLE_SRS3=vectorMinMax/VectorMinMaxP.cpp vectorMinMax/VectorMinMaxS.cpp
+
+SRCS=main.cpp $(FRAMEWORK_SRS) $(EXAMPLE_SRS) $(EXAMPLE_SRS1) $(EXAMPLE_SRS2) $(EXAMPLE_SRS3)
 OBJS=$(subst .cpp,.o,$(SRCS))
 
 all: main

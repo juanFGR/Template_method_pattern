@@ -9,7 +9,7 @@ public:
 	MergeSortS();
 	virtual ~MergeSortS();
 
-	void resolver();
+	string resolver();
 	void mezcla(pair<Solucion*,Solucion*>);
 	Solucion* getInstance();
 

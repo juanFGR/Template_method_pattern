@@ -1,5 +1,6 @@
 
 #include<iostream>
+
 #include "FibonacciS.h"
 
 FibonacciS::FibonacciS() : Solucion::Solucion() {
@@ -9,8 +10,10 @@ FibonacciS::~FibonacciS() {
 }
 
 
-void FibonacciS::resolver() {
-	cout << _n << endl;
+string FibonacciS::resolver() {
+  stringstream sx;
+	sx << _n;
+	return sx.str();
 }
 
 void FibonacciS::mezcla(pair<Solucion*,Solucion*> subSoluciones) {

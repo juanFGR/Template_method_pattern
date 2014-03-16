@@ -4,7 +4,9 @@ main.o: main.cpp framework/Framework.h framework/Problema.h \
  examples/../framework/Solucion.h examples/FibonacciS.h \
  mergeSort/MergeSortP.h mergeSort/../framework/Problema.h \
  mergeSort/MergeSortS.h mergeSort/../framework/Solucion.h \
- mergeSort/MergeSortS.h
+ mergeSort/MergeSortS.h vectorMinMax/VectorMinMaxP.h \
+ vectorMinMax/../framework/Problema.h vectorMinMax/VectorMinMaxS.h \
+ vectorMinMax/../framework/Solucion.h vectorMinMax/VectorMinMaxS.h
 Framework.o: framework/Framework.cpp framework/Framework.h \
  framework/Problema.h framework/Solucion.h
 Problema.o: framework/Problema.cpp framework/Problema.h \
@@ -25,3 +27,9 @@ QuickHullP.o: quickHull/QuickHullP.cpp quickHull/QuickHullP.h \
  quickHull/QuickHullS.h quickHull/../framework/Solucion.h
 QuickHullS.o: quickHull/QuickHullS.cpp quickHull/QuickHullS.h \
  quickHull/../framework/Solucion.h
+VectorMinMaxP.o: vectorMinMax/VectorMinMaxP.cpp \
+ vectorMinMax/VectorMinMaxP.h vectorMinMax/../framework/Problema.h \
+ vectorMinMax/../framework/Solucion.h vectorMinMax/VectorMinMaxS.h \
+ vectorMinMax/../framework/Solucion.h
+VectorMinMaxS.o: vectorMinMax/VectorMinMaxS.cpp \
+ vectorMinMax/VectorMinMaxS.h vectorMinMax/../framework/Solucion.h

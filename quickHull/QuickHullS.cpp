@@ -9,12 +9,11 @@ QuickHullS::~QuickHullS() {
 }
 
 
-void QuickHullS::resolver() {
+string QuickHullS::resolver() {
   _n = _vector.size();
-
+stringstream sx;
   for(int i=0; i<_n;i++)
-	cout << _vector[i] << " ";
-  cout<<endl;
+	sx << _vector[i] << " ";
 }
 
 void QuickHullS::mezcla(pair<Solucion*,Solucion*> subSoluciones) {

@@ -9,7 +9,7 @@ public:
 	FibonacciS();
 	virtual ~FibonacciS();
 
-	void resolver();
+	string resolver();
 	void mezcla(pair<Solucion*,Solucion*>);
 	Solucion* getInstance();
 
