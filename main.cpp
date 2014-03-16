@@ -6,8 +6,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include"framework/Framework.h"
-#include"examples/FibonacciP.h"
-#include"examples/FibonacciS.h"
+#include"fibonacci/FibonacciP.h"
+#include"fibonacci/FibonacciS.h"
 #include"mergeSort/MergeSortP.h"
 #include"mergeSort/MergeSortS.h"
 #include"vectorMinMax/VectorMinMaxP.h"

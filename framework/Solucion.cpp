@@ -7,7 +7,7 @@ Solucion::Solucion() {
 Solucion::~Solucion() {
 }
 
-void Solucion::resolver() {
+string Solucion::resolver() {
 }
 
 void Solucion::mezcla(pair<Solucion*,Solucion*> subSoluciones) {

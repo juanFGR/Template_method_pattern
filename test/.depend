@@ -1,22 +1,24 @@
 UnitTestCase.o: UnitTestCase.cpp ../framework/Framework.h \
- ../framework/Problema.h ../framework/Solucion.h ../examples/FibonacciP.h \
- ../examples/../framework/Problema.h ../examples/FibonacciS.h \
- ../examples/../framework/Solucion.h ../examples/FibonacciS.h \
- ../mergeSort/MergeSortP.h ../mergeSort/../framework/Problema.h \
- ../mergeSort/MergeSortS.h ../mergeSort/../framework/Solucion.h \
- ../mergeSort/MergeSortS.h ../vectorMinMax/VectorMinMaxP.h \
- ../vectorMinMax/../framework/Problema.h ../vectorMinMax/VectorMinMaxS.h \
- ../vectorMinMax/../framework/Solucion.h ../vectorMinMax/VectorMinMaxS.h
+ ../framework/Problema.h ../framework/Solucion.h \
+ ../fibonacci/FibonacciP.h ../fibonacci/../framework/Problema.h \
+ ../fibonacci/FibonacciS.h ../fibonacci/../framework/Solucion.h \
+ ../fibonacci/FibonacciS.h ../mergeSort/MergeSortP.h \
+ ../mergeSort/../framework/Problema.h ../mergeSort/MergeSortS.h \
+ ../mergeSort/../framework/Solucion.h ../mergeSort/MergeSortS.h \
+ ../vectorMinMax/VectorMinMaxP.h ../vectorMinMax/../framework/Problema.h \
+ ../vectorMinMax/VectorMinMaxS.h ../vectorMinMax/../framework/Solucion.h \
+ ../vectorMinMax/VectorMinMaxS.h
 Framework.o: ../framework/Framework.cpp ../framework/Framework.h \
  ../framework/Problema.h ../framework/Solucion.h
 Problema.o: ../framework/Problema.cpp ../framework/Problema.h \
  ../framework/Solucion.h
 Solucion.o: ../framework/Solucion.cpp ../framework/Solucion.h
-FibonacciP.o: ../examples/FibonacciP.cpp ../examples/FibonacciP.h \
- ../examples/../framework/Problema.h ../examples/../framework/Solucion.h \
- ../examples/FibonacciS.h ../examples/../framework/Solucion.h
-FibonacciS.o: ../examples/FibonacciS.cpp ../examples/FibonacciS.h \
- ../examples/../framework/Solucion.h
+FibonacciP.o: ../fibonacci/FibonacciP.cpp ../fibonacci/FibonacciP.h \
+ ../fibonacci/../framework/Problema.h \
+ ../fibonacci/../framework/Solucion.h ../fibonacci/FibonacciS.h \
+ ../fibonacci/../framework/Solucion.h
+FibonacciS.o: ../fibonacci/FibonacciS.cpp ../fibonacci/FibonacciS.h \
+ ../fibonacci/../framework/Solucion.h
 MergeSortP.o: ../mergeSort/MergeSortP.cpp ../mergeSort/MergeSortP.h \
  ../mergeSort/../framework/Problema.h \
  ../mergeSort/../framework/Solucion.h ../mergeSort/MergeSortS.h \
