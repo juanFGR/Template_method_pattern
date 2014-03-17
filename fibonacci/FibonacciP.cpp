@@ -24,5 +24,6 @@ void FibonacciP::solver(Solucion* s) {
 	if (_n == 0){  // caso especial fibonacci(0) = 1
 		_n = 1;
 	}
+	
 	((FibonacciS*)s)->setValor(_n);
 }

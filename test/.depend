@@ -1,4 +1,4 @@
-UnitTestCase.o: UnitTestCase.cpp ../framework/Framework.h \
+UnitTestCase.o: UnitTestCase.cpp UnitTestCase.h ../framework/Framework.h \
  ../framework/Problema.h ../framework/Solucion.h \
  ../fibonacci/FibonacciP.h ../fibonacci/../framework/Problema.h \
  ../fibonacci/FibonacciS.h ../fibonacci/../framework/Solucion.h \

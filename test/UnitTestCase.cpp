@@ -1,59 +1,17 @@
-#include <iostream>
-#include <string>
-#include <list>
-#include <cppunit/TestCase.h>
-#include <cppunit/TestFixture.h>
-#include <cppunit/ui/text/TextTestRunner.h>
-#include <cppunit/extensions/HelperMacros.h>
-#include <cppunit/extensions/TestFactoryRegistry.h>
-#include <cppunit/TestResult.h>
-#include <cppunit/TestResultCollector.h>
-#include <cppunit/TestRunner.h>
-#include <cppunit/BriefTestProgressListener.h>
-#include <cppunit/CompilerOutputter.h>
-#include <cppunit/XmlOutputter.h>
-#include <netinet/in.h>
+#include"UnitTestCase.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include"../framework/Framework.h"
-#include"../fibonacci/FibonacciP.h"
-#include"../fibonacci/FibonacciS.h"
-#include"../mergeSort/MergeSortP.h"
-#include"../mergeSort/MergeSortS.h"
-#include"../vectorMinMax/VectorMinMaxP.h"
-#include"../vectorMinMax/VectorMinMaxS.h"
 
-using namespace CppUnit;
-using namespace std;
 
-//-------------
+int UnitTestCase::fib(int x) {
+ if (x == 0)
+        return 0;
 
-class UnitTestCase : public CppUnit::TestFixture
-{
-    CPPUNIT_TEST_SUITE(UnitTestCase);
-    CPPUNIT_TEST(testFibonacci);
-    CPPUNIT_TEST(testMaxMin);
-    CPPUNIT_TEST_SUITE_END();
- 
-public:
+    if (x == 1)
+        return 1;
 
-    void setUp(void);
-
-    void tearDown(void);
-
- 
-
-protected:
-    void testFibonacci(void);
-    void testMaxMin(void);
+    return fib(x-1)+fib(x-2);
     
-private:
-    
-	Problema* problema;
-	Solucion* solucion;
-	Framework* framework;
-};
+}
 
 //-----------------------------------------------------------------------------
 
@@ -64,9 +22,7 @@ void UnitTestCase::testFibonacci(void)
 	solucion = new FibonacciS();
 	framework = new Framework();
 	framework->divideyVenceras(problema, solucion);
-	
-    CPPUNIT_ASSERT(solucion->resolver() == "8");
-
+        CPPUNIT_ASSERT(solucion->resolver() =="8");
 }
  
 void UnitTestCase::testMaxMin(void)
@@ -88,6 +44,29 @@ first.push_back(2);first.push_back(15);
 	framework = new Framework();
 	framework->divideyVenceras(problema, solucion);
     CPPUNIT_ASSERT(solucion->resolver() == "  Valor Minimo 1  Valor Maximo 50");
+
+}
+
+void UnitTestCase::testMergeSort(void)
+{
+  vector<int> first; 
+first.push_back(3);first.push_back(9);
+first.push_back(8);first.push_back(1);
+first.push_back(6);first.push_back(3);
+first.push_back(9);first.push_back(8);
+first.push_back(1);first.push_back(9);
+first.push_back(50);first.push_back(6);
+first.push_back(3);first.push_back(9);
+first.push_back(8);first.push_back(1);
+first.push_back(4);first.push_back(3);
+first.push_back(2);first.push_back(15);
+
+  problema = new MergeSortP(first);
+  solucion = new MergeSortS();
+ framework = new Framework();
+
+	framework->divideyVenceras(problema, solucion);
+    CPPUNIT_ASSERT(solucion->resolver() == "1 1 1 2 3 3 3 3 4 6 6 8 8 8 9 9 9 9 15 50 ");
 
 }
  
